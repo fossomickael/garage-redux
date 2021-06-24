@@ -13,6 +13,14 @@ export const setCars = () => {
 
 }
 
+export const setOneCar = (id) => { 
+  return {
+      type: "SET_ONE_CAR",
+      payload:  [ carsData[id - 1] ]
+    };
+
+}
+
 export const addCar = (garage, car, callback) => { 
     return {
         type: "ADD_CARS",

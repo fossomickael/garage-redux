@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { createHistory as history } from 'history';
 import carsReducer from './reducers/cars_reducer';
 import CarsNew from './containers/cars_new';
+import CarsShow from './containers/cars_show';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
@@ -29,8 +30,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Switch>
+          <Route path="/" exact component={App} />
           <Route path="/cars/new" component={CarsNew} />
-          <Route path="/" component={App} />
+          <Route path="/cars/:id" component={CarsShow} />
             
       </Switch>
     </Router>

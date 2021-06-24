@@ -7,6 +7,8 @@ const cars_reducer = (state, action) => {
         return action.payload;
       case "SET_CARS":
           return action.payload;
+      case "SET_ONE_CAR":
+          return action.payload;
       default:
             return state;        
 

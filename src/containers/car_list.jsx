@@ -28,7 +28,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({ setCars}, dispatch);
-  }
+}
 
 
 export default  connect(mapStateToProps, mapDispatchToProps)(CarList);
