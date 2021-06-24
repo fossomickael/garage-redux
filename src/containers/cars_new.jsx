@@ -5,6 +5,7 @@ import { addCar } from '../actions/cars';
 
 class CarsNew extends Component {
   onSubmit = (values) => {
+
     this.props.addCar(this.props.garage, values, () => {
       this.props.history.push('/');
     });
@@ -12,7 +13,7 @@ class CarsNew extends Component {
 
   render () {
     return [
-  
+     
       <div key="add" className="form-container" style={{ backgroundImage: "url('/assets/images/form.jpg')"}}>
         <div className="overlay"></div>
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
@@ -38,7 +39,6 @@ class CarsNew extends Component {
     ];
   }
 };
-
 const mapStateToProps = (state) => {
   return {
     garage: state.garage

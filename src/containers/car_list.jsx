@@ -7,7 +7,7 @@ import Car from '../components/car';
 class CarList extends Component {
 
     componentDidMount() { 
-        this.props.setCars(); 
+        this.props.setCars(this.props.garage); 
     }
     
     render() {
@@ -22,7 +22,8 @@ class CarList extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-      cars: state.cars
+      cars: state.cars,
+      garage: state.garage
     };
 }
 

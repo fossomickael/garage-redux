@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class App extends Component {
 
     render() {
-        return  <div className="app">HELLO
+        return  <div className="app">
         <CarList />
      </div>;
       }
