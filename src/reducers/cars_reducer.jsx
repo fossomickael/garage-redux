@@ -9,6 +9,8 @@ const cars_reducer = (state, action) => {
           return action.payload;
       case "ADD_CAR_FULFILLED":
         return state;
+      case "REMOVE_CAR_FULFILLED":
+          return state;
       default:
           return state;
     }
