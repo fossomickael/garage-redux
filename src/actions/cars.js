@@ -17,10 +17,15 @@ export const setCars = (garage) => {
         }
   }
 }
-export const setOneCar = (id) => { 
+export const setOneCar = (id, garage) => { 
   return {
       type: "SET_ONE_CAR",
-      payload:  [ carsData[id - 1] ]
+      async payload () {
+        const url = `${BASE_URL}/cars/${id}`;
+        const response = await fetch(url);
+        const car = await response.json();
+        return  [car];
+      }
     };
 
 }
